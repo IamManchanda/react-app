@@ -1,0 +1,29 @@
+{
+	"SublimeLinter":
+	{
+		"linters":
+		{
+			"eslint":
+			{
+				"excludes":
+				[
+					"dist/*",
+					"node_modules/*"
+				]
+			},
+			"jshint":
+			{
+				"@disable": true
+			}
+		}
+	},
+	"folders":
+	[
+		{
+			"path": "."
+		},
+		{
+			"path": "/opt/lampp/htdocs/web/mern-bootcamp/005-learn-react"
+		}
+	]
+}

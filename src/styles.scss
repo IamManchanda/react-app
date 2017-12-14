@@ -1,0 +1,12 @@
+/**
+ * Styles
+ */
+
+@import 'settings';
+
+/// Boilerplate
+@import 'boilerplate/styles';
+
+/// Components
+@import 'components/app';
+@import 'components/person/app-Person';

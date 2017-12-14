@@ -1,0 +1,15 @@
+.app-Person {
+  margin: .5rem .75rem;
+  border: 1px solid #eee;
+  box-shadow: 0 2px 2px #ccc;
+  padding: 1.25rem;
+  cursor: pointer;
+}
+
+.app-Person_Title {
+  color: $primary-color;
+}
+
+.app-Person_Content {
+  color: $secondary-color;
+}

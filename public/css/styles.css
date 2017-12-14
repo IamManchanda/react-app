@@ -1,0 +1,67 @@
+/**
+ * Styles
+ */
+/**
+ * Styles
+ */
+/**
+ * Styles
+ */
+html,
+body {
+  margin: 0;
+  padding: 0; }
+
+p,
+ol,
+ul,
+li,
+dl,
+dt,
+dd,
+blockquote,
+figure,
+fieldset,
+legend,
+textarea,
+pre,
+iframe,
+hr,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0 0 0.5rem; }
+
+input[type=text] {
+  width: 100%;
+  padding: 6px 10px;
+  margin: 8px 0;
+  font-size: 100%;
+  box-sizing: border-box; }
+
+body {
+  font-family: sans-serif; }
+
+.app {
+  display: flex;
+  margin: 1rem 0;
+  flex-wrap: wrap; }
+  .app .columns {
+    margin-top: 0; }
+
+.app-Person {
+  margin: .5rem .75rem;
+  border: 1px solid #eee;
+  box-shadow: 0 2px 2px #ccc;
+  padding: 1.25rem;
+  cursor: pointer; }
+
+.app-Person_Title {
+  color: #1779ba; }
+
+.app-Person_Content {
+  color: #767676; }
