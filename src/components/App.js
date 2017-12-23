@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import AppPerson from './person/AppPerson';
+import scopedClasses from './scoped.css';
 
 class App extends Component {
   state = {
@@ -38,7 +39,7 @@ class App extends Component {
 
     if (this.state.showPersons) {
       personsBlock = (
-        <div className="columns">
+        <div className={scopedClasses.scoped}>
           { this.state.persons.map((person, index) => {
             return (
               <AppPerson name={ person.name }
