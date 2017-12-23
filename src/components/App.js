@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import AppPerson from './person/AppPerson';
-import scopedClasses from './scoped.css';
+import { scopedApp } from './scopedApp.css';
 
 class App extends Component {
   state = {
@@ -39,19 +39,21 @@ class App extends Component {
 
     if (this.state.showPersons) {
       personsBlock = (
-        <div className={scopedClasses.scoped}>
-          { this.state.persons.map((person, index) => {
-            return (
-              <AppPerson name={ person.name }
-                         age={ person.age }
-                         country={ person.country }
-                         clicked={ () => this.deletePersonHandler(index) }
-                         change={ (event) => this.nameChangedHandler(event, person.id) }
-                         key={ person.id } >
-                { person.designation }
-              </AppPerson>
-            );
-          }) }
+        <div className={scopedApp}>
+          <div className="columns">
+            { this.state.persons.map((person, index) => {
+              return (
+                <AppPerson name={ person.name }
+                           age={ person.age }
+                           country={ person.country }
+                           clicked={ () => this.deletePersonHandler(index) }
+                           change={ (event) => this.nameChangedHandler(event, person.id) }
+                           key={ person.id } >
+                  { person.designation }
+                </AppPerson>
+              );
+            }) }
+          </div>
         </div>
       );
       toggleStateCSS.push('', 'is-info');
