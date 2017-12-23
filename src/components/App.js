@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import AppPerson from './person/AppPerson';
-import { scoped } from './scoped.css';
+import scoped from './scoped.css';
 
 class App extends Component {
   state = {
@@ -60,7 +60,7 @@ class App extends Component {
     }
 
     return (
-      <div className={'app ' + scoped}>
+      <div className={'app ' + scoped.scoped}>
         <div className="container">
           <button className={'button' + toggleStateCSS.join(' ')}
                   onClick={ this.togglePersonsHandler }>

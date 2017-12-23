@@ -1,10 +1,10 @@
 import React from 'react';
-import { scoped } from './scoped.css';
+import scoped from './scoped.scss';
 
 const AppPerson = (props) => {
   return (
-    <div className={'app-Person column card ' + scoped}>
-      <h3 className="app-Person_Title" 
+    <div className={'app-Person column card ' + scoped.appPerson}>
+      <h3 className={'app-Person_Title ' + scoped.appPersonTitle} 
           onClick={ props.clicked }>
         { props.name }, { props.age }
       </h3>
