@@ -5,7 +5,7 @@
 
 ## Special Note
 
-Foundation specific classes like `grid-x`, `cell`, `card` doesn't have to do anything with ECSS based Classes. In real project, you should be using Foundation's Sass Mixin to insert them as ECSS classes.
+Foundation specific classes like `grid-x`, `cell`, `callout` doesn't have to do anything with ECSS based Classes. In real project, you should be using Foundation's Sass Mixin to insert them as ECSS classes.
 
 ## Install
 

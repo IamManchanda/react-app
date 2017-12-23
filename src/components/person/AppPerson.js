@@ -3,10 +3,8 @@ import scoped from './_scoped.scss';
 
 const AppPerson = (props) => {
   return (
-    <div className={'app-Person auto cell card ' + scoped.main}>
-      <h3 
-        className={'app-Person_Title ' + scoped.title} 
-        onClick={ props.clicked }>
+    <div className={'app-Person auto cell callout ' + scoped.main}>
+      <h3 className={'app-Person_Title ' + scoped.title} >
         { props.name }, { props.age }
       </h3>
       <p className={'app-Person_Content ' + scoped.content}>
@@ -16,6 +14,13 @@ const AppPerson = (props) => {
         type="text" 
         onChange={ props.change } 
         value={ props.name } />
+      <button 
+        className="close-button" 
+        aria-label="Dismiss alert" 
+        type="button" 
+        onClick={ props.clicked }>
+        <span aria-hidden="true">&times;</span>
+      </button>
     </div>
   );
 };
