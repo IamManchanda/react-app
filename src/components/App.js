@@ -41,12 +41,13 @@ class App extends Component {
         <div className="grid-x grid-margin-x">
           { this.state.persons.map((person, index) => {
             return (
-              <AppPerson name={ person.name }
-                         age={ person.age }
-                         country={ person.country }
-                         clicked={ () => this.deletePersonHandler(index) }
-                         change={ (event) => this.nameChangedHandler(event, person.id) }
-                         key={ person.id } >
+              <AppPerson
+                name={ person.name }
+                age={ person.age }
+                country={ person.country }
+                clicked={ () => this.deletePersonHandler(index) }
+                change={ (event) => this.nameChangedHandler(event, person.id) }
+                key={ person.id } >
                 { person.designation }
               </AppPerson>
             );
@@ -58,16 +59,21 @@ class App extends Component {
       toggleStateCSS.push('', 'secondary');
     }
 
+    let toggleButtonBlock = (
+      <div className="grid-x grid-margin-x">
+        <div className="cell">
+          <button 
+            className={'button' + toggleStateCSS.join(' ')}
+            onClick={ this.togglePersonsHandler }>
+            Toggle Persons
+          </button>
+        </div>
+      </div>
+    );
+
     return (
       <div className="app">
-        <div className="grid-x grid-margin-x">
-          <div className="cell">
-            <button className={'button' + toggleStateCSS.join(' ')}
-                  onClick={ this.togglePersonsHandler }>
-              Toggle Persons
-            </button>
-          </div>
-        </div>
+        { toggleButtonBlock }
         { personsBlock }  
       </div>
     );
