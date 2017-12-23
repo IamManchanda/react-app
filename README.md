@@ -1,5 +1,8 @@
 # React App! CSS with ECSS approach!
 
+- Checkout ECSS Approach in `components` [folder](https://github.com/IamManchanda/react-app/tree/master/src/components) 
+- Checkout Scoping Approach in `person` [folder](https://github.com/IamManchanda/react-app/tree/master/src/components/person) 
+
 ## Install
 
 ```bash
