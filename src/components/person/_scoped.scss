@@ -1,3 +1,8 @@
+// As this file is scoped through CSS Modules, 
+// you don't have to worry about any naming convention 
+// like ECSS to beat specificity
+// That said, I recommend ECSS instead of scoping
+
 $boxShadowVar: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
 
 // Main Block of the component
