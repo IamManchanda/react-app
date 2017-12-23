@@ -1,5 +1,9 @@
-.appPerson {
+.block {
+  margin-top: 1rem;
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12); }
 
-.appPersonTitle {
-  font-size: 2rem; }
+.title {
+  color: #0ea29d; }
+
+.content {
+  color: #000; }

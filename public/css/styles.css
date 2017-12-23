@@ -1,12 +1,6 @@
 /**
  * Styles
  */
-/**
- * Styles
- */
-/**
- * Styles
- */
 html,
 body {
   margin: 0;
@@ -47,11 +41,9 @@ body {
   font-family: sans-serif; }
 
 .app {
-  display: flex;
-  margin: 1rem 0;
-  flex-wrap: wrap; }
-  .app .columns {
-    margin-top: 0; }
+  padding-top: 1rem;
+  background: #f3f3f3;
+  padding: 2rem 2rem 3rem; }
 
 .app-Person {
   margin: .5rem .75rem;

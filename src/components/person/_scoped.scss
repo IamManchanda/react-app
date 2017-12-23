@@ -1,0 +1,16 @@
+$boxShadowVar: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+
+// Main Block of the component
+.main {
+  margin-top: 1rem;
+  box-shadow: $boxShadowVar;
+}
+
+// All Elements within the main block
+.title {
+  font-size: 1.125rem;
+}
+
+.content {
+  font-weight: bold;
+}
