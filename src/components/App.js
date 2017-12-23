@@ -38,7 +38,7 @@ class App extends Component {
 
     if (this.state.showPersons) {
       personsBlock = (
-        <div className="columns">
+        <div className="grid-x grid-margin-x">
           { this.state.persons.map((person, index) => {
             return (
               <AppPerson name={ person.name }
@@ -53,22 +53,22 @@ class App extends Component {
           }) }
         </div>
       );
-      toggleStateCSS.push('', 'is-info');
+      toggleStateCSS.push('', 'primary');
     } else {
-      toggleStateCSS.push('', 'is-primary');
+      toggleStateCSS.push('', 'secondary');
     }
 
     return (
       <div className="app">
-        <div className="container">
-          <button className={'button' + toggleStateCSS.join(' ')}
+        <div className="grid-x grid-margin-x">
+          <div className="cell">
+            <button className={'button' + toggleStateCSS.join(' ')}
                   onClick={ this.togglePersonsHandler }>
-            Toggle Persons
-          </button>
+              Toggle Persons
+            </button>
+          </div>
         </div>
-        <div className="container">
-          { personsBlock }
-        </div>  
+        { personsBlock }  
       </div>
     );
   }
