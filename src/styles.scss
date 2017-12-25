@@ -7,6 +7,8 @@
 /// Boilerplate
 @import 'base/styles';
 
+/// Containers
+@import 'containers/app';
+
 /// Components
-@import 'components/app';
-@import 'components/person/app-Person';
+@import 'components/persons/person/app-Person';
