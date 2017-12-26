@@ -11,6 +11,7 @@ const AppCockpit = (props) => {
   return (
     <div className="app-Cockpit grid-x grid-margin-x">
       <div className="cell">
+        <h4 className="app-Cockpit_Title">{props.appTitle}</h4>
         <button 
           className={'button app-Cockpit_Button' + toggleStateCSS.join(' ')}
           onClick={props.clicked}>

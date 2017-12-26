@@ -4,7 +4,7 @@
 .app {
   padding-top: 1rem;
   background: #f3f3f3;
-  padding: 2rem 2rem 3rem; }
+  padding: 1rem 2rem 3rem; }
 
 .app-Person {
   margin: .5rem .75rem;
@@ -21,6 +21,9 @@
 
 .app-Cockpit {
   margin-top: 1rem; }
+
+.app-Cockpit_Title {
+  margin-bottom: 1rem; }
 
 .app-Cockpit_Button {
   border-radius: 5000px; }
