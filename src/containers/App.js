@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import AppPerson from './person/AppPerson';
+import AppPersons from './../components/persons/AppPersons';
+import AppCockpit from "./../components/cockpit/AppCockpit";
 
 class App extends Component {
   state = {
@@ -34,46 +35,24 @@ class App extends Component {
 
   render() {
     let personsBlock = null;
-    const toggleStateCSS = [];
 
     if (this.state.showPersons) {
       personsBlock = (
         <div className="grid-x grid-margin-x">
-          { this.state.persons.map((person, index) => {
-            return (
-              <AppPerson
-                name={ person.name }
-                age={ person.age }
-                country={ person.country }
-                clicked={ () => this.deletePersonHandler(index) }
-                change={ (event) => this.nameChangedHandler(event, person.id) }
-                key={ person.id } >
-                { person.designation }
-              </AppPerson>
-            );
-          }) }
+          <AppPersons
+            persons={this.state.persons}
+            clicked={this.deletePersonHandler}
+            changed={this.nameChangedHandler} />
         </div>
       );
-      toggleStateCSS.push('', 'primary');
-    } else {
-      toggleStateCSS.push('', 'secondary');
     }
-
-    let toggleButtonBlock = (
-      <div className="grid-x grid-margin-x">
-        <div className="cell">
-          <button 
-            className={'button' + toggleStateCSS.join(' ')}
-            onClick={ this.togglePersonsHandler }>
-            Toggle Persons
-          </button>
-        </div>
-      </div>
-    );
 
     return (
       <div className="app">
-        { toggleButtonBlock }
+        <AppCockpit
+          showPersons={this.state.showPersons}
+          persons={this.state.persons}
+          clicked={this.togglePersonsHandler} />
         { personsBlock }  
       </div>
     );

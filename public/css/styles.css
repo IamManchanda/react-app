@@ -1,45 +1,6 @@
 /**
  * Styles
  */
-html,
-body {
-  margin: 0;
-  padding: 0; }
-
-p,
-ol,
-ul,
-li,
-dl,
-dt,
-dd,
-blockquote,
-figure,
-fieldset,
-legend,
-textarea,
-pre,
-iframe,
-hr,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  margin: 0;
-  padding: 0 0 0.5rem; }
-
-input[type=text] {
-  width: 100%;
-  padding: 6px 10px;
-  margin: 8px 0;
-  font-size: 100%;
-  box-sizing: border-box; }
-
-body {
-  font-family: sans-serif; }
-
 .app {
   padding-top: 1rem;
   background: #f3f3f3;
@@ -57,3 +18,9 @@ body {
 
 .app-Person_Content {
   color: #767676; }
+
+.app-Cockpit {
+  margin-top: 1rem; }
+
+.app-Cockpit_Button {
+  border-radius: 5000px; }
