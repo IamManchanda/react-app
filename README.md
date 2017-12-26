@@ -1,11 +1,11 @@
 # React App! CSS with ECSS approach!
 
-- Checkout ECSS Approach in `src` [folder](https://github.com/IamManchanda/react-app/tree/master/src/). ECSS Based Project [organisation](http://ecss.io/chapter5.html#h-H2_0) can be found in `components` [folder](https://github.com/IamManchanda/react-app/tree/master/src/components).
+- Checkout ECSS Approach in `src` [folder](https://github.com/IamManchanda/react-app/tree/master/src/). ECSS Based Project [organisation](http://ecss.io/chapter5.html#h-H2_0) can be found in `person` [folder](https://github.com/IamManchanda/react-app/tree/master/src/components/person) and also `cockpit` [folder](https://github.com/IamManchanda/react-app/tree/master/src/components/cockpit).
 - Checkout Scoping Approach in `person` [folder](https://github.com/IamManchanda/react-app/tree/master/src/components/person). Please note this folder also includes ECSS Approach, please look into [AppPerson.js](https://github.com/IamManchanda/react-app/blob/master/src/components/person/AppPerson.js#L6-L17) on how to integrate them together.
 
 ## Special Note
 
-Foundation specific classes like `grid-x`, `cell`, `callout` doesn't have to do anything with ECSS based Classes. In real project, you should be using Foundation's Sass Mixin to insert them as ECSS classes.
+Foundation specific classes like `grid-x`, `cell`, `callout`, `button` doesn't have to do anything with ECSS based Classes. In real project, you should be using Foundation's Sass Mixin to insert them as ECSS classes.
 
 ## Install
 
