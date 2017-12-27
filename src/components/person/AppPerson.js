@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import scoped from './_scoped.scss';
+import scoped from './__scoped.scss';
 
 class AppPerson extends Component {
   constructor(props) {
