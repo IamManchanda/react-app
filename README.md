@@ -13,7 +13,7 @@
 - If you ask me, I would only recommend using scoping for handling state changes. If you look into [SMACSS](https://smacss.com/book/type-state), Jonathan Snook recommends using `!important` for state changes but as we have scoping and the power of JavaScript, there is no need to use `important` to beat specificity instead we can just do something like:
 
 ```
-<p className={'app-Person_Content ' + (this.state.isContentActive && scoped.isContentActive)}>
+<p className={'app-Person_Content ' + (this.state.isContentActive ? scoped.isContentActive : '')}>
 ```
 
 ## Install
