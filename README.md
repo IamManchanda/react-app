@@ -8,6 +8,8 @@
 
 - Foundation specific classes like `grid-x`, `cell`, `callout`, `button` doesn't have to do anything with ECSS based Classes. In real project, you should be using Foundation's Sass Mixin to insert them as ECSS classes.
 
+- `app` is the namespace used in this example as far as naming convention of ECSS is concerned.
+
 - If you ask me, I would only recommend using scoping for handling state changes. If you look into [SMACSS](https://smacss.com/book/type-state), Jonathan Snook recommends using `!important` for state changes but as we have scoping and the power of JavaScript, there is no need to use `important` to beat specificity instead we can just do something like:
 
 ```
