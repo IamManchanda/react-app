@@ -2,7 +2,22 @@ import React, { Component } from 'react';
 import scoped from './_scoped.scss';
 
 class AppPerson extends Component {
+  constructor(props) {
+    super(props);
+    console.log('[AppPerson.js] Inside constructor', props);
+  }
+
+  componentWillMount() {
+    console.log('[AppPerson.js] Inside componentWillMount');
+  }
+
+  componentDidMount() {
+    console.log('[AppPerson.js] Inside componentDidMount');
+  }
+
   render() {
+    console.log('[AppPerson.js] Inside render');
+
     return (
       <div className={'app-Person auto cell callout ' + scoped.main}>
         <h3 className={'app-Person_Title ' + scoped.title} >

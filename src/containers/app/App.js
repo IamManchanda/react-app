@@ -1,8 +1,35 @@
-import React, { Component } from 'react';
-import AppPersons from './../components/persons/AppPersons';
-import AppCockpit from "./../components/cockpit/AppCockpit";
+import React, { PureComponent } from 'react';
+import AppPersons from './../../components/persons/AppPersons';
+import AppCockpit from "./../../components/cockpit/AppCockpit";
 
-class App extends Component {
+class App extends PureComponent {
+  constructor(props) {
+    super(props);
+    console.log('[App.js] Inside constructor', props);
+  }
+
+  componentWillMount() {
+    console.log('[App.js] Inside componentWillMount');
+  }
+
+  componentDidMount() {
+    console.log('[App.js] Inside componentDidMount');
+  }
+
+  // shouldComponentUpdate(nextProps, nextState) {
+  //   console.log('[UPDATE App.js] Inside shouldComponentUpdate', nextProps, nextState);
+  //   return nextState.persons !== this.state.persons
+  //       || nextState.showPersons !== this.state.showPersons;
+  // }
+
+  componentWillUpdate(nextProps, nextState) {
+    console.log('[UPDATE App.js] Inside componentWillUpdate', nextProps, nextState);
+  }
+
+  componentDidUpdate(prevProps, prevState) {
+    console.log('[UPDATE App.js] Inside componentDidUpdate', prevProps, prevState);
+  }
+
   state = {
     persons: [
       { id: 1, name: 'Narendra Modi', age: 67, country: 'India', designation: '16th Prime Minister' },
@@ -10,7 +37,7 @@ class App extends Component {
       { id: 3, name: 'Vladimir Putin', age: 65, country: 'Russia', designation: '2nd and 4th President' },
     ],
     showPersons: false,
-  }
+  };
 
   nameChangedHandler = (event, id) => {
     const personIndex = this.state.persons.findIndex((p) => p.id === id);
@@ -19,23 +46,24 @@ class App extends Component {
     const persons = [...this.state.persons];
     persons[personIndex] = person;
     this.setState({persons}); 
-  }
+  };
 
   deletePersonHandler = (personIndex) => {
     const persons = [...this.state.persons]
     persons.splice(personIndex, 1);
     this.setState({persons});
-  }
+  };
 
   togglePersonsHandler = () => {
     this.setState({
       showPersons: !this.state.showPersons,
     });
-  }
+  };
 
   render() {
-    let personsBlock = null;
+    console.log('[App.js] Inside render');
 
+    let personsBlock = null;
     if (this.state.showPersons) {
       personsBlock = (
         <div className="grid-x grid-margin-x">
@@ -49,6 +77,9 @@ class App extends Component {
 
     return (
       <div className="app">
+        <button 
+          className="button secondary"
+          onClick={() => {this.setState({ showPersons: true })}}>Show Persons</button>
         <AppCockpit
           appTitle={this.props.title}
           showPersons={this.state.showPersons}
